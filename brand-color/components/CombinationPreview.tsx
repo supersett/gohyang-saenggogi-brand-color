@@ -106,7 +106,7 @@ const CombinationPreview: React.FC<CombinationPreviewProps> = ({
                         ? "#1A1A1A"
                         : "#FFFFFF",
                   }}
-                  className="px-6 py-3.5 rounded-xl text-[10px] font-black shadow-lg transform active:scale-95 transition-all uppercase tracking-widest relative z-10 mx-auto"
+                  className="px-6 py-3 rounded-xl text-[11px] font-black shadow-lg transform active:scale-95 transition-all uppercase tracking-widest relative z-10 mx-auto"
                 >
                   가맹 안내 보기
                 </button>
@@ -160,7 +160,7 @@ const CombinationPreview: React.FC<CombinationPreviewProps> = ({
               <h5 className="font-bold text-gray-900 mb-1 flex items-center gap-2 text-xs">
                 {combo.title}
               </h5>
-              <p className="text-[11px] text-gray-500 leading-relaxed font-medium line-clamp-2">
+              <p className="text-[11px] text-gray-500 leading-relaxed font-medium line-clamp-3">
                 {combo.description}
               </p>
             </div>
