@@ -117,71 +117,7 @@ const App: React.FC = () => {
           </div>
           <PaletteTable />
         </section>
-
-        {/* Strategy Guide */}
-        <section className="bg-white rounded-[3rem] p-12 shadow-sm border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-black mb-6 flex items-center gap-3">
-              <span className="text-[#9E1B1B]">L</span>ight Strategy
-            </h3>
-            <ul className="space-y-4 text-sm text-gray-600 font-medium">
-              <li className="flex gap-3">
-                <span className="text-[#EBDE9A] font-black">01</span>
-                <span>
-                  <strong className="text-gray-900">시각적 역동성:</strong> L6,
-                  L7, L8은 미세한 붉은 톤과 방사형 그라디언트를 활용해 신선한
-                  원육의 이미지와 역동적인 에너지를 전달합니다.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-[#EBDE9A] font-black">02</span>
-                <span>
-                  <strong className="text-gray-900">신뢰와 여백:</strong> L4와
-                  L5는 고의적인 여백과 초저채도 골드를 활용해 브랜드의 정직함을
-                  시각화합니다.
-                </span>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-2xl font-black mb-6 flex items-center gap-3">
-              <span className="text-[#9E1B1B]">D</span>ark Strategy
-            </h3>
-            <ul className="space-y-4 text-sm text-gray-600 font-medium">
-              <li className="flex gap-3">
-                <span className="text-[#9E1B1B] font-black">01</span>
-                <span>
-                  <strong className="text-gray-900">다층적 깊이감:</strong> D3,
-                  D5, D7은 여러 층의 그라디언트를 중첩시켜 단조로움을 피하고
-                  브랜드의 전문성을 표현합니다.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-[#9E1B1B] font-black">02</span>
-                <span>
-                  <strong className="text-gray-900">미래 지향적 가치:</strong>{" "}
-                  D8(붉은 나침반)의 코닉 효과는 변화에 유연하고 진보하는
-                  프랜차이즈의 비전을 상징합니다.
-                </span>
-              </li>
-            </ul>
-          </div>
-        </section>
       </main>
-
-      <footer className="mt-24 py-16 border-t border-gray-200 bg-white">
-        <div className="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex items-center gap-4">
-            <div className="w-8 h-8 bg-[#9E1B1B] rounded-lg"></div>
-            <div className="text-gray-400 text-[10px] font-black tracking-widest uppercase">
-              GOHYANG MEAT PREMIUM FRANCHISE IDENTITY SYSTEM
-            </div>
-          </div>
-          <div className="text-gray-400 text-[10px] font-bold">
-            Copyright 2024. All Rights Reserved.
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
