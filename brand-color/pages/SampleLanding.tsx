@@ -10,7 +10,13 @@ import {
   Award,
   Truck,
   ShieldCheck,
+  Search,
+  Users,
+  TrendingUp,
+  Handshake,
+  ArrowRight,
 } from "lucide-react";
+
 import logoText from "@/img/logo-text.svg";
 import heroImage from "@/img/hero.png";
 import philosophyImage from "@/img/sample1.png";
@@ -180,6 +186,202 @@ const HeroSection = () => {
   );
 };
 
+const StoreSection = () => {
+  const stores = [
+    {
+      name: "강남 본점",
+      address: "서울 강남구 테헤란로 123",
+      phone: "02-1234-5678",
+      img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800",
+    },
+    {
+      name: "판교 직영점",
+      address: "경기 성남시 분당구 판교역로 10",
+      phone: "031-987-6543",
+      img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800",
+    },
+    {
+      name: "부산 센텀점",
+      address: "부산 해운대구 센텀남대로 35",
+      phone: "051-234-5678",
+      img: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800",
+    },
+  ];
+
+  return (
+    <section className="py-32 bg-brand-cream">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div className="max-w-xl">
+            <span className="text-brand-red font-bold tracking-[0.3em] text-xs uppercase mb-4 block">
+              Store Locations
+            </span>
+            <h2 className="font-myeongjo text-3xl md:text-4xl font-bold text-brand-deepText leading-tight">
+              전국 어디서나 만나는
+              <br />
+              고향의 따뜻한 맛
+            </h2>
+          </div>
+          <button className="flex items-center gap-2 bg-brand-red hover:bg-red-800 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-brand-red/10 group text-base">
+            전체 매장 찾기
+            <Search
+              size={18}
+              className="group-hover:scale-110 transition-transform"
+            />
+          </button>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {stores.map((store, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all group"
+            >
+              <div className="h-64 overflow-hidden relative">
+                <img
+                  src={store.img}
+                  alt={store.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute top-6 left-6 bg-brand-red text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">
+                  Premium Store
+                </div>
+              </div>
+              <div className="p-8">
+                <h3 className="font-myeongjo text-xl font-bold text-brand-deepText mb-4">
+                  {store.name}
+                </h3>
+                <div className="space-y-3">
+                  <p className="flex items-center gap-3 text-brand-deepText/60 text-sm">
+                    <MapPin size={16} className="text-brand-red" />
+                    {store.address}
+                  </p>
+                  <p className="flex items-center gap-3 text-brand-deepText/60 text-sm">
+                    <Phone size={16} className="text-brand-red" /> {store.phone}
+                  </p>
+                </div>
+                <button className="mt-8 flex items-center gap-2 text-brand-red font-bold text-sm hover:gap-4 transition-all">
+                  상세 보기 <ArrowRight size={16} />
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// New Franchise Section (Light Theme)
+const FranchiseSection = () => {
+  const benefits = [
+    {
+      icon: Handshake,
+      title: "체계적인 교육",
+      desc: "고기 선별부터 손질까지, 전문가의 노하우를 그대로 전수합니다.",
+    },
+    {
+      icon: Users,
+      title: "강력한 브랜드파워",
+      desc: "전국적인 인지도와 신뢰를 바탕으로 안정적인 운영을 지원합니다.",
+    },
+    {
+      icon: TrendingUp,
+      title: "수익 극대화",
+      desc: "산지 직송 시스템을 통한 유통 마진 최소화로 높은 마진율을 실현합니다.",
+    },
+  ];
+
+  const steps = [
+    {
+      num: "01",
+      title: "가맹 상담",
+      desc: "전문 컨설턴트와의 1:1 맞춤형 상담",
+    },
+    {
+      num: "02",
+      title: "상권 분석",
+      desc: "입지 최적화를 위한 데이터 기반 분석",
+    },
+    {
+      num: "03",
+      title: "점주 교육",
+      desc: "조리부터 서비스까지 체계적인 교육",
+    },
+    { num: "04", title: "매장 오픈", desc: "본사 홍보 지원 및 오픈 현장 케어" },
+  ];
+
+  return (
+    <section className="py-32 bg-brand-cream border-t border-brand-champagne/10">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-20">
+          <span className="text-brand-red font-bold tracking-[0.3em] text-xs uppercase mb-4 block">
+            Franchise Guide
+          </span>
+          <h2 className="font-myeongjo text-3xl md:text-4xl font-bold text-brand-deepText">
+            성공적인 미래를 함께할 파트너
+          </h2>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid gap-6">
+            {benefits.map((benefit, i) => (
+              <div
+                key={i}
+                className="flex gap-8 p-8 bg-white rounded-3xl shadow-sm border border-brand-champagne/5 hover:border-brand-red/20 transition-all"
+              >
+                <div className="w-14 h-14 bg-brand-red/5 text-brand-red rounded-2xl flex items-center justify-center shrink-0">
+                  <benefit.icon size={28} />
+                </div>
+                <div>
+                  <h4 className="font-myeongjo text-xl font-bold text-brand-deepText mb-2">
+                    {benefit.title}
+                  </h4>
+                  <p className="text-brand-deepText/60 text-sm leading-relaxed">
+                    {benefit.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-white p-10 md:p-16 rounded-[3rem] shadow-xl relative overflow-hidden border border-brand-champagne/10">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand-red/5 rounded-bl-full"></div>
+            <h3 className="font-myeongjo text-2xl font-bold text-brand-deepText mb-12">
+              창업 프로세스
+            </h3>
+            <div className="space-y-10 relative">
+              <div className="absolute left-6 top-2 bottom-2 w-0.5 bg-brand-champagne/20"></div>
+              {steps.map((step, i) => (
+                <div key={i} className="flex gap-8 items-start relative z-10">
+                  <div className="w-12 h-12 bg-brand-palegold text-brand-deepText rounded-full flex items-center justify-center font-bold text-lg shadow-md shrink-0 border-4 border-white">
+                    {step.num}
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-brand-deepText mb-1 text-base">
+                      {step.title}
+                    </h5>
+                    <p className="text-brand-deepText/50 text-sm">
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <button className="mt-16 w-full py-5 bg-brand-red hover:bg-red-800 text-white font-bold rounded-2xl transition-all shadow-lg shadow-brand-red/20 flex items-center justify-center gap-3 group text-base">
+              가맹 창업 문의하기
+              <ArrowRight
+                size={20}
+                className="group-hover:translate-x-2 transition-transform"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const FeatureCard = ({
   icon: Icon,
   title,
@@ -248,6 +450,8 @@ const App: React.FC = () => {
           </div>
         </section>
 
+        {/* Store Locator Section - NEW Light Section */}
+        <StoreSection />
         {/* Brand Philosophy - Background set to black */}
         <section className="py-24 bg-black relative overflow-hidden border-y border-brand-champagne/10">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
@@ -297,13 +501,22 @@ const App: React.FC = () => {
         </section>
       </main>
 
+      {/* Franchise Section - NEW Light Section */}
+      <FranchiseSection />
+
       <footer className="bg-black border-t border-brand-champagne/10 py-20 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
-            <h2 className="font-myeongjo text-3xl font-bold text-brand-red mb-6">
-              고향생고기
-            </h2>
-            <p className="text-brand-cream/40 max-w-sm mb-8 leading-relaxed text-sm font-medium">
+            <img
+              src={logoText}
+              alt="고향생고기"
+              className="h-16 object-contain -ml-6 mb-6"
+              style={{
+                background: "transparent",
+                imageRendering: "crisp-edges",
+              }}
+            />
+            <p className="text-brand-cream/70 max-w-sm mb-8 leading-relaxed text-sm font-medium">
               대한민국 최고의 신선도를 자랑하는 프리미엄 당일 도축 생고기
               브랜드입니다. 우리의 목표는 전국 어디서나 가장 신선한 한우를 즐길
               수 있게 하는 것입니다.
@@ -313,7 +526,7 @@ const App: React.FC = () => {
                 <a
                   key={sns}
                   href="#"
-                  className="text-xs text-brand-palegold/50 hover:text-brand-cream transition-colors underline underline-offset-8 decoration-brand-red/20 font-semibold"
+                  className="text-xs text-brand-palegold/70 hover:text-brand-cream transition-colors underline underline-offset-8 decoration-brand-red/20 font-semibold"
                 >
                   {sns}
                 </a>
@@ -325,7 +538,7 @@ const App: React.FC = () => {
             <h4 className="font-bold text-base mb-6 text-brand-cream uppercase tracking-wider">
               Quick Links
             </h4>
-            <ul className="space-y-4 text-brand-cream/40 text-sm font-medium">
+            <ul className="space-y-4 text-brand-cream/70 text-sm font-medium">
               <li>
                 <a
                   href="#"
@@ -365,7 +578,7 @@ const App: React.FC = () => {
             <h4 className="font-bold text-base mb-6 text-brand-cream uppercase tracking-wider">
               Contact Us
             </h4>
-            <ul className="space-y-4 text-brand-cream/40 text-sm font-medium">
+            <ul className="space-y-4 text-brand-cream/70 text-sm font-medium">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="mt-1 text-brand-red" /> 서울특별시
                 강남구 테헤란로 123
