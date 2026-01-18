@@ -1,5 +1,10 @@
 import React from "react";
-import { BRAND_COLORS } from "../constants";
+import {
+  BRAND_COLORS,
+  BRAND_COLORS2,
+  BRAND_COLORS3,
+  BRAND_COLORS1,
+} from "../constants";
 import ColorCard from "../components/ColorCard";
 import PaletteTable from "../components/PaletteTable";
 import CombinationPreview from "../components/CombinationPreview";
@@ -41,8 +46,28 @@ const HomePage: React.FC = () => {
               Core Palette
             </h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+          <div className="text-md text-gray-800 mb-2">기존 </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-1">
             {BRAND_COLORS.map((color) => (
+              <ColorCard key={color.name} color={color} />
+            ))}
+          </div>
+
+          <div className="text-md text-gray-800 mb-2 mt-2">1번 Palette</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-1">
+            {BRAND_COLORS1.map((color) => (
+              <ColorCard key={color.name} color={color} />
+            ))}
+          </div>
+          <div className="text-md text-gray-800 mb-2 mt-2">2번 Palette </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-1">
+            {BRAND_COLORS2.map((color) => (
+              <ColorCard key={color.name} color={color} />
+            ))}
+          </div>
+          <div className="text-md text-gray-800 mb-2 mt-2">3번 Palette </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-1">
+            {BRAND_COLORS3.map((color) => (
               <ColorCard key={color.name} color={color} />
             ))}
           </div>

@@ -788,7 +788,7 @@ const FeatureSection = () => {
 
 const App: React.FC = () => {
   // 🎨 이 페이지는 BRAND_COLORS를 사용합니다
-  useColorSet("BRAND_COLORS");
+  useColorSet("BRAND_COLORS3");
 
   return (
     <div className="min-h-screen bg-black text-brand-cream">

@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>고향생고기 브랜드 팔레트</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Config는 CSS Variables를 사용합니다 -->
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
               brand: {
-                red: "#9E1B1B",
-                burgundy: "#2D0B0B",
-                champagne: "#D4AF37",
-                palegold: "#EBDE9A",
-                dark: "#1A1A1A",
-                cream: "#FFFDF0",
-                deepText: "#0F172A",
+                red: "rgb(var(--brand-red) / <alpha-value>)",
+                burgundy: "rgb(var(--brand-burgundy) / <alpha-value>)",
+                champagne: "rgb(var(--brand-champagne) / <alpha-value>)",
+                palegold: "rgb(var(--brand-palegold) / <alpha-value>)",
+                dark: "rgb(var(--brand-dark) / <alpha-value>)",
+                cream: "rgb(var(--brand-cream) / <alpha-value>)",
+                white: "rgb(var(--brand-white) / <alpha-value>)",
+                deepText: "rgb(var(--brand-deeptext) / <alpha-value>)",
               },
             },
           },
@@ -29,6 +31,23 @@
       rel="stylesheet"
     />
     <style>
+      /* CSS Variables for dynamic color switching */
+      /* 
+        초기값은 BRAND_COLORS를 사용합니다 (폴백용).
+        각 페이지 컴포넌트에서 useColorSet을 호출하면 동적으로 변경됩니다.
+      */
+      :root {
+        /* BRAND_COLORS - 기본값 (useColorSet이 호출되기 전 폴백) */
+        --brand-red: 158 27 27; /* #9E1B1B */
+        --brand-burgundy: 45 11 11; /* #2D0B0B */
+        --brand-champagne: 212 175 55; /* #D4AF37 */
+        --brand-palegold: 235 222 154; /* #EBDE9A */
+        --brand-dark: 26 26 26; /* #1A1A1A */
+        --brand-cream: 255 253 240; /* #FFFDF0 */
+        --brand-white: 255 255 255; /* #FFFFFF */
+        --brand-deeptext: 15 23 42; /* #0F172A */
+      }
+
       body {
         font-family: "Noto Sans KR", sans-serif;
         background-color: #000000;
