@@ -6,6 +6,7 @@ import SampleLanding from "./pages/SampleLanding";
 import SampleLanding2 from "./pages/SampleLanding2";
 import SampleLanding3 from "./pages/SampleLanding3";
 import SampleLanding1 from "./pages/SampleLanding1";
+import SampleLanding4 from "./pages/SampleLanding4";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <Route path="/sample-landing1" element={<SampleLanding1 />} />
       <Route path="/sample-landing2" element={<SampleLanding2 />} />
       <Route path="/sample-landing3" element={<SampleLanding3 />} />
+      <Route path="/sample-landing4" element={<SampleLanding4 />} />
     </Routes>
   );
 };

@@ -24,7 +24,7 @@ import heroImage from "@/img/hero.png";
 import philosophyImage from "@/img/sample1.png";
 import origin_logo from "@/img/origin_logo.png";
 import success_img from "@/img/success_img.png";
-
+import bg1 from "@/img/bg1.png";
 // Shared UI Components
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -742,7 +742,15 @@ const BrandPhilosophySection = () => {
 
 const FeatureSection = () => {
   return (
-    <section className="py-24 px-6 bg-black">
+    <section
+      className="py-24 px-6 bg-black"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bg1})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="max-w-7xl mx-auto">
         <div className="flex text-center mb-20 flex-col justify-center mb-8 items-center gap-4">
           <img
