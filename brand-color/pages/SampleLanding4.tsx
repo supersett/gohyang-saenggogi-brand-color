@@ -25,9 +25,6 @@ import philosophyImage from "@/img/sample1.png";
 import origin_logo from "@/img/origin_logo.png";
 import success_img from "@/img/success_img.png";
 import bg1 from "@/img/bg1.png";
-import bg2 from "@/img/bg2.png";
-import bg3 from "@/img/bg3.jpg";
-
 // Shared UI Components
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -464,30 +461,22 @@ const SuccessFormulaSection = () => {
 
   return (
     <section
-      className="py-32 relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${bg3})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="bg-black py-32 relative overflow-hidden"
       aria-labelledby="success-heading"
     >
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-black/70 z-0"></div>
       <div className="absolute top-0 right-0 w-full h-full pointer-events-none overflow-hidden">
         {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[180%] aspect-square border border-brand-champagne/10 rounded-full animate-pulse-slow"></div> */}
         {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] aspect-square border border-brand-champagne/5 rounded-full"></div> */}
         {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] aspect-square border border-brand-champagne/5 rounded-full"></div> */}
 
         {/* 대형 로고 워터마크 (마스크 효과 및 플로팅 애니메이션 추가) */}
-        {/* <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/3 w-[800px] h-[800px] opacity-[0.06] grayscale brightness-150 transition-transform duration-[10s] animate-float">
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/3 w-[800px] h-[800px] opacity-[0.06] grayscale brightness-150 transition-transform duration-[10s] animate-float">
           <img
             src={origin_logo}
             alt="Background Watermark"
             className="w-full h-full object-contain [mask-image:radial-gradient(circle,white_20%,transparent_70%)]"
           />
-        </div> */}
+        </div>
 
         {/* 은은한 광원 효과 */}
         <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-brand-red/5 blur-[150px] rounded-full"></div>
@@ -698,7 +687,15 @@ const BrandLabelDivider: React.FC<{ backgroundColor?: string }> = ({
 
 const BrandPhilosophySection = () => {
   return (
-    <section className="py-24 bg-black relative overflow-hidden border-y border-brand-champagne/10">
+    <section
+      className="py-24 bg-black relative overflow-hidden border-y border-brand-champagne/10"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${bg1})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div className="relative">
           <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-brand-red/10 border border-brand-champagne/10">
@@ -756,7 +753,7 @@ const FeatureSection = () => {
     <section
       className="py-24 px-6 bg-black"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bg1})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${bg1})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

@@ -687,7 +687,15 @@ const BrandLabelDivider: React.FC<{ backgroundColor?: string }> = ({
 
 const BrandPhilosophySection = () => {
   return (
-    <section className="py-24 bg-black relative overflow-hidden border-y border-brand-champagne/10">
+    <section
+      className="py-24 bg-black relative overflow-hidden border-y border-brand-champagne/10"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${bg1})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div className="relative">
           <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-brand-red/10 border border-brand-champagne/10">
@@ -745,7 +753,7 @@ const FeatureSection = () => {
     <section
       className="py-24 px-6 bg-black"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bg1})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${bg1})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
