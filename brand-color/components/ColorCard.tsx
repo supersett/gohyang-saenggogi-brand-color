@@ -1,6 +1,6 @@
 import React from "react";
 import { ColorInfo } from "../types";
-
+import originLogo from "../img/origin_logo.png";
 interface ColorCardProps {
   color: ColorInfo;
 }
@@ -21,6 +21,11 @@ const ColorCard: React.FC<ColorCardProps> = ({ color }) => {
           needsBorder ? "border-b border-gray-100" : ""
         }`}
       >
+        <img
+          src={originLogo}
+          alt="logo"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60px] h-[60px]"
+        />
         <span
           className={`text-[10px] font-mono px-2 py-0.5 rounded backdrop-blur-sm shadow-sm ${
             color.hex === "#1A1A1A" ||

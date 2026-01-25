@@ -22,12 +22,28 @@
                 deepText: "rgb(var(--brand-deeptext) / <alpha-value>)",
               },
             },
+            fontFamily: {
+              pretendard: ['"Pretendard"', "sans-serif"],
+              "noto-sans": ['"Noto Sans KR"', "sans-serif"],
+              "noto-serif": ['"Noto Serif KR"', "serif"],
+              myeongjo: ['"Nanum Myeongjo"', "serif"],
+            },
           },
         },
       };
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -36,6 +52,15 @@
         초기값은 BRAND_COLORS를 사용합니다 (폴백용).
         각 페이지 컴포넌트에서 useColorSet을 호출하면 동적으로 변경됩니다.
       */
+      /* Pretendard Font */
+      @font-face {
+        font-family: "Pretendard";
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        src: url("/font/Pretendard-Regular.woff2") format("woff2");
+      }
+
       :root {
         /* BRAND_COLORS - 기본값 (useColorSet이 호출되기 전 폴백) */
         --brand-red: 158 27 27; /* #9E1B1B */
@@ -57,6 +82,9 @@
       }
       .font-myeongjo {
         font-family: "Nanum Myeongjo", serif;
+      }
+      .font-noto-serif {
+        font-optical-sizing: auto;
       }
       .hero-gradient {
         background: linear-gradient(

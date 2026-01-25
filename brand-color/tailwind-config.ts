@@ -13,6 +13,12 @@ export const createTailwindConfig = () => {
         colors: {
           brand: brandColors,
         },
+        fontFamily: {
+          pretendard: ['"Pretendard"', "sans-serif"],
+          "noto-sans": ['"Noto Sans KR"', "sans-serif"],
+          "noto-serif": ['"Noto Serif KR"', "serif"],
+          myeongjo: ['"Nanum Myeongjo"', "serif"],
+        },
       },
     },
   };

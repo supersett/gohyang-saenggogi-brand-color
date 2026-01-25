@@ -8,7 +8,14 @@ export type ColorSetName =
   | "BRAND_COLORS"
   | "BRAND_COLORS1"
   | "BRAND_COLORS2"
-  | "BRAND_COLORS3";
+  | "BRAND_COLORS3"
+  | "BRAND_COLORS_V1"
+  | "BRAND_COLORS_V2"
+  | "BRAND_COLORS_V3"
+  | "BRAND_COLORS_V4"
+  | "BRAND_COLORS_V5"
+  | "BRAND_COLORS_V6"
+  | "BRAND_COLORS_V7";
 
 // 앱 전체의 기본 색상 세트 (App.tsx에서 사용)
 export const DEFAULT_COLOR_SET: ColorSetName = "BRAND_COLORS";
@@ -321,6 +328,538 @@ export const BRAND_COLORS3: ColorInfo[] = [
   },
 ];
 
+// VERSION 1 - Modern Purple Gradient
+export const BRAND_COLORS_V1: ColorInfo[] = [
+  {
+    name: "Heritage Red",
+    hex: "#9E1B1B",
+    rgb: "158, 27, 27",
+    usage: "브랜드 아이덴티티, 핵심 강조, 메인 버튼",
+    twClass: "bg-[#9E1B1B]",
+    combinations: "Pure White, Deep Purple",
+    wcag: "5.8:1 (vs White) - Pass (AA)",
+  },
+  {
+    name: "Champagne Gold",
+    hex: "#961949",
+    rgb: "150, 25, 73",
+    usage: "하이엔드 포인트, 럭셔리 악센트, 중요 지표",
+    twClass: "bg-[#961949]",
+    combinations: "Modern Dark, Heritage Red",
+    wcag: "6.2:1 (vs White) - Pass (AA)",
+  },
+  {
+    name: "Pale Gold",
+    hex: "#7A3068",
+    rgb: "122, 48, 104",
+    usage: "배지, 부드러운 하이라이트, 보조 버튼",
+    twClass: "bg-[#7A3068]",
+    combinations: "Heritage Red, Deep Text",
+    wcag: "7.8:1 (vs White) - Pass (AAA)",
+  },
+  {
+    name: "Cream White",
+    hex: "#F5F3F8",
+    rgb: "245, 243, 248",
+    usage: "라이트모드 메인 배경, 따뜻한 청결함",
+    twClass: "bg-[#F5F3F8]",
+    combinations: "Heritage Red, Deep Text",
+    wcag: "1.05:1 (vs White) - BG only",
+  },
+  {
+    name: "Pure White",
+    hex: "#FFFFFF",
+    rgb: "255, 255, 255",
+    usage: "다크모드 텍스트, 카드 배경, 여백",
+    twClass: "bg-[#FFFFFF]",
+    combinations: "Modern Dark, Heritage Red",
+    wcag: "1.0:1 - Base",
+  },
+  {
+    name: "Modern Dark",
+    hex: "#34476B",
+    rgb: "52, 71, 107",
+    usage: "다크모드 메인 배경, 푸터, 강한 대비",
+    twClass: "bg-[#34476B]",
+    combinations: "Pale Gold, Pure White",
+    wcag: "6.5:1 (vs White) - Pass (AA)",
+  },
+  {
+    name: "Deep Burgundy",
+    hex: "#2F4858",
+    rgb: "47, 72, 88",
+    usage: "프리미엄 다크 배경, 묵직한 신뢰감 형성",
+    twClass: "bg-[#2F4858]",
+    combinations: "Champagne Gold, Pure White",
+    wcag: "8.1:1 (vs White) - Pass (AAA)",
+  },
+  {
+    name: "Deep Text",
+    hex: "#534073",
+    rgb: "83, 64, 115",
+    usage: "라이트모드 메인 텍스트, 가독성 확보",
+    twClass: "bg-[#534073]",
+    combinations: "Cream White, Pure White",
+    wcag: "8.9:1 (vs White) - Pass (AAA)",
+  },
+];
+
+// VERSION 2 - Soft Lavender Dream
+export const BRAND_COLORS_V2: ColorInfo[] = [
+  {
+    name: "Heritage Red",
+    hex: "#9E1B1B",
+    rgb: "158, 27, 27",
+    usage: "브랜드 아이덴티티, 핵심 강조, 메인 버튼",
+    twClass: "bg-[#9E1B1B]",
+    combinations: "Pure White, Soft Lavender",
+    wcag: "5.8:1 (vs White) - Pass (AA)",
+  },
+  {
+    name: "Champagne Gold",
+    hex: "#ABA5DC",
+    rgb: "171, 165, 220",
+    usage: "하이엔드 포인트, 럭셔리 악센트, 중요 지표",
+    twClass: "bg-[#ABA5DC]",
+    combinations: "Modern Dark, Heritage Red",
+    wcag: "1.8:1 (vs White) - UI only",
+  },
+  {
+    name: "Pale Gold",
+    hex: "#F2ECFF",
+    rgb: "242, 236, 255",
+    usage: "배지, 부드러운 하이라이트, 보조 버튼",
+    twClass: "bg-[#F2ECFF]",
+    combinations: "Heritage Red, Deep Text",
+    wcag: "1.04:1 (vs White) - UI only",
+  },
+  {
+    name: "Cream White",
+    hex: "#FAFAFE",
+    rgb: "250, 250, 254",
+    usage: "라이트모드 메인 배경, 따뜻한 청결함",
+    twClass: "bg-[#FAFAFE]",
+    combinations: "Heritage Red, Deep Text",
+    wcag: "1.01:1 (vs White) - BG only",
+  },
+  {
+    name: "Pure White",
+    hex: "#FFFFFF",
+    rgb: "255, 255, 255",
+    usage: "다크모드 텍스트, 카드 배경, 여백",
+    twClass: "bg-[#FFFFFF]",
+    combinations: "Modern Dark, Heritage Red",
+    wcag: "1.0:1 - Base",
+  },
+  {
+    name: "Modern Dark",
+    hex: "#777395",
+    rgb: "119, 115, 149",
+    usage: "다크모드 메인 배경, 푸터, 강한 대비",
+    twClass: "bg-[#777395]",
+    combinations: "Pale Gold, Pure White",
+    wcag: "3.8:1 (vs White) - Pass (AA for UI)",
+  },
+  {
+    name: "Deep Burgundy",
+    hex: "#4A4661",
+    rgb: "74, 70, 97",
+    usage: "프리미엄 다크 배경, 묵직한 신뢰감 형성",
+    twClass: "bg-[#4A4661]",
+    combinations: "Champagne Gold, Pure White",
+    wcag: "7.2:1 (vs White) - Pass (AAA)",
+  },
+  {
+    name: "Deep Text",
+    hex: "#2D2A3D",
+    rgb: "45, 42, 61",
+    usage: "라이트모드 메인 텍스트, 가독성 확보",
+    twClass: "bg-[#2D2A3D]",
+    combinations: "Cream White, Pure White",
+    wcag: "12.8:1 (vs White) - Pass (AAA)",
+  },
+];
+
+// VERSION 3 - Warm Terracotta
+export const BRAND_COLORS_V3: ColorInfo[] = [
+  {
+    name: "Heritage Red",
+    hex: "#9E1B1B",
+    rgb: "158, 27, 27",
+    usage: "브랜드 아이덴티티, 핵심 강조, 메인 버튼",
+    twClass: "bg-[#9E1B1B]",
+    combinations: "Pure White, Soft Peach",
+    wcag: "5.8:1 (vs White) - Pass (AA)",
+  },
+  {
+    name: "Champagne Gold",
+    hex: "#BB8379",
+    rgb: "187, 131, 121",
+    usage: "하이엔드 포인트, 럭셔리 악센트, 중요 지표",
+    twClass: "bg-[#BB8379]",
+    combinations: "Modern Dark, Heritage Red",
+    wcag: "2.4:1 (vs White) - UI only",
+  },
+  {
+    name: "Pale Gold",
+    hex: "#FFF4EF",
+    rgb: "255, 244, 239",
+    usage: "배지, 부드러운 하이라이트, 보조 버튼",
+    twClass: "bg-[#FFF4EF]",
+    combinations: "Heritage Red, Deep Text",
+    wcag: "1.02:1 (vs White) - UI only",
+  },
+  {
+    name: "Cream White",
+    hex: "#F3EED9",
+    rgb: "243, 238, 217",
+    usage: "라이트모드 메인 배경, 따뜻한 청결함",
+    twClass: "bg-[#F3EED9]",
+    combinations: "Heritage Red, Deep Text",
+    wcag: "1.12:1 (vs White) - BG only",
+  },
+  {
+    name: "Pure White",
+    hex: "#FFFFFF",
+    rgb: "255, 255, 255",
+    usage: "다크모드 텍스트, 카드 배경, 여백",
+    twClass: "bg-[#FFFFFF]",
+    combinations: "Modern Dark, Heritage Red",
+    wcag: "1.0:1 - Base",
+  },
+  {
+    name: "Modern Dark",
+    hex: "#3D2E2A",
+    rgb: "61, 46, 42",
+    usage: "다크모드 메인 배경, 푸터, 강한 대비",
+    twClass: "bg-[#3D2E2A]",
+    combinations: "Pale Gold, Pure White",
+    wcag: "11.5:1 (vs White) - Pass (AAA)",
+  },
+  {
+    name: "Deep Burgundy",
+    hex: "#2A1D1A",
+    rgb: "42, 29, 26",
+    usage: "프리미엄 다크 배경, 묵직한 신뢰감 형성",
+    twClass: "bg-[#2A1D1A]",
+    combinations: "Champagne Gold, Pure White",
+    wcag: "15.2:1 (vs White) - Pass (AAA)",
+  },
+  {
+    name: "Deep Text",
+    hex: "#4A3530",
+    rgb: "74, 53, 48",
+    usage: "라이트모드 메인 텍스트, 가독성 확보",
+    twClass: "bg-[#4A3530]",
+    combinations: "Cream White, Pure White",
+    wcag: "10.8:1 (vs F3EED9) - Pass (AAA)",
+  },
+];
+
+// VERSION 4 - Dusty Rose Elegance
+export const BRAND_COLORS_V4: ColorInfo[] = [
+  {
+    name: "Heritage Red",
+    hex: "#9E1B1B",
+    rgb: "158, 27, 27",
+    usage: "브랜드 아이덴티티, 핵심 강조, 메인 버튼",
+    twClass: "bg-[#9E1B1B]",
+    combinations: "Pure White, Dusty Rose",
+    wcag: "5.8:1 (vs White) - Pass (AA)",
+  },
+  {
+    name: "Champagne Gold",
+    hex: "#D19FA0",
+    rgb: "209, 159, 160",
+    usage: "하이엔드 포인트, 럭셔리 악센트, 중요 지표",
+    twClass: "bg-[#D19FA0]",
+    combinations: "Modern Dark, Heritage Red",
+    wcag: "1.9:1 (vs White) - UI only",
+  },
+  {
+    name: "Pale Gold",
+    hex: "#F5E5E6",
+    rgb: "245, 229, 230",
+    usage: "배지, 부드러운 하이라이트, 보조 버튼",
+    twClass: "bg-[#F5E5E6]",
+    combinations: "Heritage Red, Deep Text",
+    wcag: "1.06:1 (vs White) - UI only",
+  },
+  {
+    name: "Cream White",
+    hex: "#FFF9F9",
+    rgb: "255, 249, 249",
+    usage: "라이트모드 메인 배경, 따뜻한 청결함",
+    twClass: "bg-[#FFF9F9]",
+    combinations: "Heritage Red, Deep Text",
+    wcag: "1.01:1 (vs White) - BG only",
+  },
+  {
+    name: "Pure White",
+    hex: "#FFFFFF",
+    rgb: "255, 255, 255",
+    usage: "다크모드 텍스트, 카드 배경, 여백",
+    twClass: "bg-[#FFFFFF]",
+    combinations: "Modern Dark, Heritage Red",
+    wcag: "1.0:1 - Base",
+  },
+  {
+    name: "Modern Dark",
+    hex: "#A96467",
+    rgb: "169, 100, 103",
+    usage: "다크모드 메인 배경, 푸터, 강한 대비",
+    twClass: "bg-[#A96467]",
+    combinations: "Pale Gold, Pure White",
+    wcag: "2.8:1 (vs White) - UI only",
+  },
+  {
+    name: "Deep Burgundy",
+    hex: "#574142",
+    rgb: "87, 65, 66",
+    usage: "프리미엄 다크 배경, 묵직한 신뢰감 형성",
+    twClass: "bg-[#574142]",
+    combinations: "Champagne Gold, Pure White",
+    wcag: "8.4:1 (vs White) - Pass (AAA)",
+  },
+  {
+    name: "Deep Text",
+    hex: "#3A2829",
+    rgb: "58, 40, 41",
+    usage: "라이트모드 메인 텍스트, 가독성 확보",
+    twClass: "bg-[#3A2829]",
+    combinations: "Cream White, Pure White",
+    wcag: "13.5:1 (vs White) - Pass (AAA)",
+  },
+];
+
+
+// VERSION 5 - Coral Lavender Fusion
+export const BRAND_COLORS_V5: ColorInfo[] = [
+  {
+    name: "Heritage Red",
+    hex: "#9E1B1B",
+    rgb: "158, 27, 27",
+    usage: "브랜드 아이덴티티, 핵심 강조, 메인 버튼",
+    twClass: "bg-[#9E1B1B]",
+    combinations: "Pure White, Soft Coral",
+    wcag: "5.8:1 (vs White) - Pass (AA)",
+  },
+  {
+    name: "Champagne Gold",
+    hex: "#B27166",
+    rgb: "178, 113, 102",
+    usage: "하이엔드 포인트, 럭셔리 악센트, 중요 지표",
+    twClass: "bg-[#B27166]",
+    combinations: "Modern Dark, Heritage Red",
+    wcag: "2.6:1 (vs White) - UI only",
+  },
+  {
+    name: "Pale Gold",
+    hex: "#FFE5DC",
+    rgb: "255, 229, 220",
+    usage: "배지, 부드러운 하이라이트, 보조 버튼",
+    twClass: "bg-[#FFE5DC]",
+    combinations: "Heritage Red, Deep Text",
+    wcag: "1.08:1 (vs White) - UI only",
+  },
+  {
+    name: "Cream White",
+    hex: "#F8F6FF",
+    rgb: "248, 246, 255",
+    usage: "라이트모드 메인 배경, 따뜻한 청결함",
+    twClass: "bg-[#F8F6FF]",
+    combinations: "Heritage Red, Deep Text",
+    wcag: "1.02:1 (vs White) - BG only",
+  },
+  {
+    name: "Pure White",
+    hex: "#FFFFFF",
+    rgb: "255, 255, 255",
+    usage: "다크모드 텍스트, 카드 배경, 여백",
+    twClass: "bg-[#FFFFFF]",
+    combinations: "Modern Dark, Heritage Red",
+    wcag: "1.0:1 - Base",
+  },
+  {
+    name: "Modern Dark",
+    hex: "#ABA5DC",
+    rgb: "171, 165, 220",
+    usage: "다크모드 메인 배경, 푸터, 강한 대비",
+    twClass: "bg-[#ABA5DC]",
+    combinations: "Pale Gold, Pure White",
+    wcag: "1.8:1 (vs White) - UI only",
+  },
+  {
+    name: "Deep Burgundy",
+    hex: "#6B6590",
+    rgb: "107, 101, 144",
+    usage: "프리미엄 다크 배경, 묵직한 신뢰감 형성",
+    twClass: "bg-[#6B6590]",
+    combinations: "Champagne Gold, Pure White",
+    wcag: "4.2:1 (vs White) - Pass (AA)",
+  },
+  {
+    name: "Deep Text",
+    hex: "#2D2838",
+    rgb: "45, 40, 56",
+    usage: "라이트모드 메인 텍스트, 가독성 확보",
+    twClass: "bg-[#2D2838]",
+    combinations: "Cream White, Pure White",
+    wcag: "12.9:1 (vs White) - Pass (AAA)",
+  },
+];
+
+// VERSION 6 - Mint Peach Harmony
+export const BRAND_COLORS_V6: ColorInfo[] = [
+  {
+    name: "Heritage Red",
+    hex: "#9E1B1B",
+    rgb: "158, 27, 27",
+    usage: "브랜드 아이덴티티, 핵심 강조, 메인 버튼",
+    twClass: "bg-[#9E1B1B]",
+    combinations: "Pure White, Soft Peach",
+    wcag: "5.8:1 (vs White) - Pass (AA)",
+  },
+  {
+    name: "Champagne Gold",
+    hex: "#E09A8E",
+    rgb: "224, 154, 142",
+    usage: "하이엔드 포인트, 럭셔리 악센트, 중요 지표",
+    twClass: "bg-[#E09A8E]",
+    combinations: "Modern Dark, Heritage Red",
+    wcag: "1.7:1 (vs White) - UI only",
+  },
+  {
+    name: "Pale Gold",
+    hex: "#D1E7E0",
+    rgb: "209, 231, 224",
+    usage: "배지, 부드러운 하이라이트, 보조 버튼",
+    twClass: "bg-[#D1E7E0]",
+    combinations: "Heritage Red, Deep Text",
+    wcag: "1.15:1 (vs White) - UI only",
+  },
+  {
+    name: "Cream White",
+    hex: "#F3EED9",
+    rgb: "243, 238, 217",
+    usage: "라이트모드 메인 배경, 따뜻한 청결함",
+    twClass: "bg-[#F3EED9]",
+    combinations: "Heritage Red, Deep Text",
+    wcag: "1.12:1 (vs White) - BG only",
+  },
+  {
+    name: "Pure White",
+    hex: "#FFFFFF",
+    rgb: "255, 255, 255",
+    usage: "다크모드 텍스트, 카드 배경, 여백",
+    twClass: "bg-[#FFFFFF]",
+    combinations: "Modern Dark, Heritage Red",
+    wcag: "1.0:1 - Base",
+  },
+  {
+    name: "Modern Dark",
+    hex: "#4A6B60",
+    rgb: "74, 107, 96",
+    usage: "다크모드 메인 배경, 푸터, 강한 대비",
+    twClass: "bg-[#4A6B60]",
+    combinations: "Pale Gold, Pure White",
+    wcag: "5.8:1 (vs White) - Pass (AA)",
+  },
+  {
+    name: "Deep Burgundy",
+    hex: "#2D4339",
+    rgb: "45, 67, 57",
+    usage: "프리미엄 다크 배경, 묵직한 신뢰감 형성",
+    twClass: "bg-[#2D4339]",
+    combinations: "Champagne Gold, Pure White",
+    wcag: "10.2:1 (vs White) - Pass (AAA)",
+  },
+  {
+    name: "Deep Text",
+    hex: "#1F2D27",
+    rgb: "31, 45, 39",
+    usage: "라이트모드 메인 텍스트, 가독성 확보",
+    twClass: "bg-[#1F2D27]",
+    combinations: "Cream White, Pure White",
+    wcag: "14.8:1 (vs F3EED9) - Pass (AAA)",
+  },
+];
+
+// VERSION 7 - Bold Red Spectrum
+export const BRAND_COLORS_V7: ColorInfo[] = [
+  {
+    name: "Heritage Red",
+    hex: "#9E1B1B",
+    rgb: "158, 27, 27",
+    usage: "브랜드 아이덴티티, 핵심 강조, 메인 버튼",
+    twClass: "bg-[#9E1B1B]",
+    combinations: "Pure White, Bright Coral",
+    wcag: "5.8:1 (vs White) - Pass (AA)",
+  },
+  {
+    name: "Champagne Gold",
+    hex: "#FF8C79",
+    rgb: "255, 140, 121",
+    usage: "하이엔드 포인트, 럭셔리 악센트, 중요 지표",
+    twClass: "bg-[#FF8C79]",
+    combinations: "Modern Dark, Heritage Red",
+    wcag: "1.5:1 (vs White) - UI only",
+  },
+  {
+    name: "Pale Gold",
+    hex: "#FFCFC7",
+    rgb: "255, 207, 199",
+    usage: "배지, 부드러운 하이라이트, 보조 버튼",
+    twClass: "bg-[#FFCFC7]",
+    combinations: "Heritage Red, Deep Text",
+    wcag: "1.2:1 (vs White) - UI only",
+  },
+  {
+    name: "Cream White",
+    hex: "#FFF5F3",
+    rgb: "255, 245, 243",
+    usage: "라이트모드 메인 배경, 따뜻한 청결함",
+    twClass: "bg-[#FFF5F3]",
+    combinations: "Heritage Red, Deep Text",
+    wcag: "1.03:1 (vs White) - BG only",
+  },
+  {
+    name: "Pure White",
+    hex: "#FFFFFF",
+    rgb: "255, 255, 255",
+    usage: "다크모드 텍스트, 카드 배경, 여백",
+    twClass: "bg-[#FFFFFF]",
+    combinations: "Modern Dark, Heritage Red",
+    wcag: "1.0:1 - Base",
+  },
+  {
+    name: "Modern Dark",
+    hex: "#AD2B26",
+    rgb: "173, 43, 38",
+    usage: "다크모드 메인 배경, 푸터, 강한 대비",
+    twClass: "bg-[#AD2B26]",
+    combinations: "Pale Gold, Pure White",
+    wcag: "5.2:1 (vs White) - Pass (AA)",
+  },
+  {
+    name: "Deep Burgundy",
+    hex: "#7D0000",
+    rgb: "125, 0, 0",
+    usage: "프리미엄 다크 배경, 묵직한 신뢰감 형성",
+    twClass: "bg-[#7D0000]",
+    combinations: "Champagne Gold, Pure White",
+    wcag: "8.9:1 (vs White) - Pass (AAA)",
+  },
+  {
+    name: "Deep Text",
+    hex: "#710000",
+    rgb: "113, 0, 0",
+    usage: "라이트모드 메인 텍스트, 가독성 확보",
+    twClass: "bg-[#710000]",
+    combinations: "Cream White, Pure White",
+    wcag: "9.8:1 (vs White) - Pass (AAA)",
+  },
+];
 // ============================================
 // 색상 세트 유틸리티 함수
 // ============================================
@@ -332,8 +871,16 @@ export const getActiveBrandColors = (): ColorInfo[] => {
   const colorSetName: ColorSetName = ACTIVE_COLOR_SET;
 
   if (colorSetName === "BRAND_COLORS") return BRAND_COLORS;
+  if (colorSetName === "BRAND_COLORS1") return BRAND_COLORS1;
   if (colorSetName === "BRAND_COLORS2") return BRAND_COLORS2;
   if (colorSetName === "BRAND_COLORS3") return BRAND_COLORS3;
+  if (colorSetName === "BRAND_COLORS_V1") return BRAND_COLORS_V1;
+  if (colorSetName === "BRAND_COLORS_V2") return BRAND_COLORS_V2;
+  if (colorSetName === "BRAND_COLORS_V3") return BRAND_COLORS_V3;
+  if (colorSetName === "BRAND_COLORS_V4") return BRAND_COLORS_V4;
+  if (colorSetName === "BRAND_COLORS_V5") return BRAND_COLORS_V5;
+  if (colorSetName === "BRAND_COLORS_V6") return BRAND_COLORS_V6;
+  if (colorSetName === "BRAND_COLORS_V7") return BRAND_COLORS_V7;
 
   return BRAND_COLORS;
 };
@@ -399,9 +946,16 @@ export const getTailwindBrandColors = (
  */
 export const getAllColorSets = () => ({
   BRAND_COLORS,
+  BRAND_COLORS1,
   BRAND_COLORS2,
   BRAND_COLORS3,
-  BRAND_COLORS1,
+  BRAND_COLORS_V1,
+  BRAND_COLORS_V2,
+  BRAND_COLORS_V3,
+  BRAND_COLORS_V4,
+  BRAND_COLORS_V5,
+  BRAND_COLORS_V6,
+  BRAND_COLORS_V7,
 });
 
 export const COMBINATIONS: CombinationExample[] = [

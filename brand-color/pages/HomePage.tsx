@@ -1,9 +1,16 @@
 import React from "react";
 import {
   BRAND_COLORS,
+  BRAND_COLORS1,
   BRAND_COLORS2,
   BRAND_COLORS3,
-  BRAND_COLORS1,
+  BRAND_COLORS_V1,
+  BRAND_COLORS_V2,
+  BRAND_COLORS_V3,
+  BRAND_COLORS_V4,
+  BRAND_COLORS_V5,
+  BRAND_COLORS_V6,
+  BRAND_COLORS_V7,
 } from "../constants";
 import ColorCard from "../components/ColorCard";
 import PaletteTable from "../components/PaletteTable";
@@ -68,6 +75,48 @@ const HomePage: React.FC = () => {
           <div className="text-md text-gray-800 mb-2 mt-2">3번 Palette </div>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-1">
             {BRAND_COLORS3.map((color) => (
+              <ColorCard key={color.name} color={color} />
+            ))}
+          </div>
+          <div className="text-md text-gray-800 mb-2 mt-2">V1 - Modern Purple Gradient</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-1">
+            {BRAND_COLORS_V1.map((color) => (
+              <ColorCard key={color.name} color={color} />
+            ))}
+          </div>
+          <div className="text-md text-gray-800 mb-2 mt-2">V2 - Soft Lavender Dream</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-1">
+            {BRAND_COLORS_V2.map((color) => (
+              <ColorCard key={color.name} color={color} />
+            ))}
+          </div>
+          <div className="text-md text-gray-800 mb-2 mt-2">V3 - Warm Terracotta</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-1">
+            {BRAND_COLORS_V3.map((color) => (
+              <ColorCard key={color.name} color={color} />
+            ))}
+          </div>
+          <div className="text-md text-gray-800 mb-2 mt-2">V4 - Dusty Rose Elegance</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-1">
+            {BRAND_COLORS_V4.map((color) => (
+              <ColorCard key={color.name} color={color} />
+            ))}
+          </div>
+          <div className="text-md text-gray-800 mb-2 mt-2">V5 - Coral Lavender Fusion</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-1">
+            {BRAND_COLORS_V5.map((color) => (
+              <ColorCard key={color.name} color={color} />
+            ))}
+          </div>
+          <div className="text-md text-gray-800 mb-2 mt-2">V6 - Mint Peach Harmony</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-1">
+            {BRAND_COLORS_V6.map((color) => (
+              <ColorCard key={color.name} color={color} />
+            ))}
+          </div>
+          <div className="text-md text-gray-800 mb-2 mt-2">V7 - Bold Red Spectrum</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-1">
+            {BRAND_COLORS_V7.map((color) => (
               <ColorCard key={color.name} color={color} />
             ))}
           </div>
